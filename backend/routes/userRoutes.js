@@ -12,3 +12,4 @@ router.route('/profile')
     .put(updateProfile);
 
 export default router;
+
