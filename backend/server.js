@@ -1,9 +1,17 @@
 import express from 'express';
-import dotenv from 'dotenv'
+import dotenv, { config } from 'dotenv'
+
+
+
+
 dotenv.config();
 const app = express();
+
+
+connectDB()
 import userRoutes from './routes/userRoutes.js'
 import { notFound,errorHandler } from './middleware/errorMiddleware.js';
+import { connectDB } from './config/db.js';
 
 const port =process.env.PORT || 5000; 
 
